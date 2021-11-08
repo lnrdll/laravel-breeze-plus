@@ -1,4 +1,23 @@
-# Laravel Breeze-plus
+<div align="center">
+    <h1>
+        <a href="#">Laravel Breeze-plus</a>
+    </h1>
+    <h4>
+        <a href="#introduction">Introduction</a>
+        •
+        <a href="#requirements">Requirements</a>
+        •
+        <a href="#installation">Installation</a>
+        •
+        <a href="#changelog">Changelog</a>
+        •
+        <a href="#contributing">Contributing</a>
+        •
+        <a href="#security">Security</a>
+        •
+        <a href="#license">License</a>
+    </h4>
+</div>
 
 [![Downloads](https://img.shields.io/packagist/dt/rlunardelli/laravel-breeze-plus.svg?style=flat-square)](https://packagist.org/packages/rlunardelli/laravel-breeze-plus)
 [![Packagist](https://img.shields.io/packagist/v/rlunardelli/laravel-breeze-plus.svg?style=flat-square)](https://packagist.org/packages/rlunardelli/laravel-breeze-plus)
