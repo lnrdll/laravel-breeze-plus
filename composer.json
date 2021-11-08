@@ -11,7 +11,6 @@
         "issues": "https://github.com/rlunardelli/laravel-breeze-plus/issues"
     },
     "license": "MIT",
-    "type": "library",
     "authors": [
         {
             "name": "Robson Lunardelli",
@@ -20,8 +19,7 @@
     ],
     "require": {
         "php": "^7.4|^8.0",
-        "laravel/breeze": "^1.4",
-        "illuminate/support": "^8.0"
+        "laravel/breeze": "^1.4"
     },
     "require-dev": {
         "orchestra/testbench": "^6.0",
@@ -37,10 +35,6 @@
             "Rlunardelli\\BreezePlus\\Tests\\": "tests"
         }
     },
-    "scripts": {
-        "test": "vendor/bin/phpunit",
-        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
-    },
     "config": {
         "sort-packages": true
     },
@@ -48,10 +42,7 @@
         "laravel": {
             "providers": [
                 "Rlunardelli\\BreezePlus\\BreezePlusServiceProvider"
-            ],
-            "aliases": {
-                "BreezePlus": "Rlunardelli\\BreezePlus\\BreezePlusFacade"
-            }
+            ]
         }
     },
     "minimum-stability": "dev",

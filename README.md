@@ -4,26 +4,20 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/rlunardelli/laravel-breeze-plus.svg?style=flat-square)](https://packagist.org/packages/rlunardelli/laravel-breeze-plus)
 ![GitHub Actions](https://github.com/rlunardelli/laravel-breeze-plus/actions/workflows/main.yml/badge.svg)
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
+## Introduction
+
+Breeze-plus provides a minimal and simple user profile page where users can update their name, email, password, and delete their account. All controllers, views, routes, requests, and rules are published to your application just like Breeze.
+
+## Requirements
+
+It requires [Laravel Breeze](https://laravel.com/docs/8.x/starter-kits#laravel-breeze-installation).
 
 ## Installation
 
 You can install the package via composer:
 
 ```bash
-composer require rlunardelli/laravel-breeze-plus
-```
-
-## Usage
-
-```php
-// Usage description here
-```
-
-### Testing
-
-```bash
-composer test
+composer require rlunardelli/laravel-breeze-plus --dev
 ```
 
 ### Changelog
@@ -46,7 +40,3 @@ If you discover any security related issues, please email robson@l9s.dev instead
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
-
-## Laravel Package Boilerplate
-
-This package was generated using the [Laravel Package Boilerplate](https://laravelpackageboilerplate.com).
