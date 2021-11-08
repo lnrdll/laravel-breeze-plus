@@ -1,4 +1,4 @@
-# Very short description of the package
+# Laravel Breeze-plus
 
 [![Downloads](https://img.shields.io/packagist/dt/rlunardelli/laravel-breeze-plus.svg?style=flat-square)](https://packagist.org/packages/rlunardelli/laravel-breeze-plus)
 [![Packagist](https://img.shields.io/packagist/v/rlunardelli/laravel-breeze-plus.svg?style=flat-square)](https://packagist.org/packages/rlunardelli/laravel-breeze-plus)
