@@ -13,15 +13,21 @@
         •
         <a href="#contributing">Contributing</a>
         •
-        <a href="#security">Security</a>
-        •
         <a href="#license">License</a>
     </h4>
+    <p>
+        <a href="https://packagist.org/packages/rlunardelli/laravel-breeze-plus">
+            <img src="https://img.shields.io/packagist/dt/rlunardelli/laravel-breeze-plus.svg" alt="Total Downloads">
+        </a>
+        <a href="https://packagist.org/packages/rlunardelli/laravel-breeze-plus">
+            <img src="https://img.shields.io/packagist/v/rlunardelli/laravel-breeze-plus.svg" alt="Latest Stable Version">
+        </a>
+        <a href="https://packagist.org/packages/rlunardelli/laravel-breeze-plus">
+            <img src="https://img.shields.io/packagist/l/rlunardelli/laravel-breeze-plus.svg" alt="License">
+        </a>
+    </p>
+    <!-- ![GitHub Actions](https://github.com/rlunardelli/laravel-breeze-plus/actions/workflows/main.yml/badge.svg) -->
 </div>
-
-[![Downloads](https://img.shields.io/packagist/dt/rlunardelli/laravel-breeze-plus.svg?style=flat-square)](https://packagist.org/packages/rlunardelli/laravel-breeze-plus)
-[![Packagist](https://img.shields.io/packagist/v/rlunardelli/laravel-breeze-plus.svg?style=flat-square)](https://packagist.org/packages/rlunardelli/laravel-breeze-plus)
-![GitHub Actions](https://github.com/rlunardelli/laravel-breeze-plus/actions/workflows/main.yml/badge.svg)
 
 ## Introduction
 
@@ -52,10 +58,6 @@ Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recen
 ## Contributing
 
 Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
-
-## Security
-
-If you discover any security related issues, please email robson@l9s.dev instead of using the issue tracker.
 
 ## License
 
