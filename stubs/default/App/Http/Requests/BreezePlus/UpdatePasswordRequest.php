@@ -2,7 +2,7 @@
 
 namespace App\Http\Requests\BreezePlus;
 
-use App\Rules\BreezePlus\CurrentPasswordRule;
+use App\Rules\CurrentPasswordRule;
 use Illuminate\Foundation\Http\FormRequest;
 
 class UpdatePasswordRequest extends FormRequest
@@ -23,8 +23,8 @@ class UpdatePasswordRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'password' => ['required', 'confirmed', 'min:6'],
-            'current_password' => ['required', new CurrentPasswordRule ],
+            'password' => ['required', 'confirmed'],
+            'current_password' => ['required', new CurrentPasswordRule],
         ];
     }
 }

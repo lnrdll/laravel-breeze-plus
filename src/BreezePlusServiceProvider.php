@@ -1,11 +1,11 @@
 <?php
 
-namespace Rlunardelli\LaravelBreezePlus;
+namespace Rlunardelli\BreezePlus;
 
-use Illuminate\Contracts\Support\DeferrableProvider;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Contracts\Support\DeferrableProvider;
 
-class LaravelBreezePlusServiceProvider extends ServiceProvider implements DeferrableProvider
+class BreezePlusServiceProvider extends ServiceProvider implements DeferrableProvider
 {
     /**
      * Register any application services.

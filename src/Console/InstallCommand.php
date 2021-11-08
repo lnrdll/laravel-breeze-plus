@@ -1,6 +1,6 @@
 <?php
 
-namespace Rlunardelli\LaravelBreezePlus\Console;
+namespace Rlunardelli\BreezePlus\Console;
 
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
@@ -28,17 +28,17 @@ class InstallCommand extends Command
      */
     public function handle()
     {
-        // ✅ Controllers...
+        // Controllers...
         (new Filesystem)->ensureDirectoryExists(app_path('Http/Controllers/BreezePlus'));
         (new Filesystem)->copyDirectory(__DIR__.'/../../stubs/default/App/Http/Controllers/BreezePlus', app_path('Http/Controllers/BreezePlus'));
 
-        // ✅ Requests...
+        // Requests...
         (new Filesystem)->ensureDirectoryExists(app_path('Http/Requests/BreezePlus'));
         (new Filesystem)->copyDirectory(__DIR__.'/../../stubs/default/App/Http/Requests/BreezePlus', app_path('Http/Requests/BreezePlus'));
 
-        // ✅ Rules...
-        (new filesystem)->ensureDirectoryExists(app_path('Http/Rules/BreezePlus'));
-        (new filesystem)->copyDirectory(__DIR__.'/../../stubs/default/App/Http/Rules/BreezePlus', app_path('Http/Rules/BreezePlus'));
+        // Rules...
+        (new filesystem)->ensureDirectoryExists(app_path('Rules/'));
+        (new filesystem)->copyDirectory(__DIR__.'/../../stubs/default/App/Rules/', app_path('Rules/'));
 
         // Views...
         (new Filesystem)->ensureDirectoryExists(resource_path('views/BreezePlus'));
@@ -49,31 +49,14 @@ class InstallCommand extends Command
         (new Filesystem)->copyDirectory(__DIR__.'/../../stubs/default/resources/views/layouts', resource_path('views/layouts'));
         (new Filesystem)->copyDirectory(__DIR__.'/../../stubs/default/resources/views/components', resource_path('views/components'));
 
-        copy(__DIR__.'/../../stubs/default/resources/views/dashboard.blade.php', resource_path('views/dashboard.blade.php'));
-
-        // Components...
-        (new Filesystem)->ensureDirectoryExists(app_path('View/Components'));
-        (new Filesystem)->copyDirectory(__DIR__.'/../../stubs/default/App/View/Components', app_path('View/Components'));
-
         // Tests...
-        $this->installTests();
+        (new Filesystem)->ensureDirectoryExists(base_path('tests/Feature/BreezePlus'));
+        (new Filesystem)->copyDirectory(__DIR__.'/../../stubs/default/tests/Feature/BreezePlus', base_path('tests/Feature/BreezePlus'));
 
         // Routes...
-        copy(__DIR__.'/../../stubs/default/routes/BreezePlus.php', base_path('routes/BreezePlus.php'));
-        append(__DIR__.'/../../stubs/default/routes/web.php', 'require __DIR__.\'/breezePlus.php\';');
+        copy(__DIR__.'/../../stubs/default/routes/breezePlus.php', base_path('routes/breezePlus.php'));
+        (new Filesystem)->append(base_path('routes/web.php'), 'require __DIR__.\'/breezePlus.php\';', null);
 
         $this->info('Breeze-plus scaffolding installed successfully.');
-    }
-
-    /**
-     * Install Breeze's tests.
-     *
-     * @return void
-     */
-    protected function installTests()
-    {
-        (new Filesystem)->ensureDirectoryExists(base_path('tests/Feature/BreezePlus'));
-
-        (new Filesystem)->copyDirectory(__DIR__.'/../../stubs/default/tests/Feature', base_path('tests/Feature/BreezePlus'));
     }
 }

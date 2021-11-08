@@ -29,18 +29,17 @@
     },
     "autoload": {
         "psr-4": {
-            "Rlunardelli\\LaravelBreezePlus\\": "src"
+            "Rlunardelli\\BreezePlus\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Rlunardelli\\LaravelBreezePlus\\Tests\\": "tests"
+            "Rlunardelli\\BreezePlus\\Tests\\": "tests"
         }
     },
     "scripts": {
         "test": "vendor/bin/phpunit",
         "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
-
     },
     "config": {
         "sort-packages": true
@@ -48,10 +47,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Rlunardelli\\LaravelBreezePlus\\LaravelBreezePlusServiceProvider"
+                "Rlunardelli\\BreezePlus\\BreezePlusServiceProvider"
             ],
             "aliases": {
-                "LaravelBreezePlus": "Rlunardelli\\LaravelBreezePlus\\LaravelBreezePlusFacade"
+                "BreezePlus": "Rlunardelli\\BreezePlus\\BreezePlusFacade"
             }
         }
     },
