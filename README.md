@@ -51,6 +51,8 @@ After Composer has installed the Laravel Breeze-plus package, you may run the `b
 php artisan breeze-plus:install
 ```
 
+Once the assets have been published, a new dropdown menu item `Profile` will show up. 
+
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
