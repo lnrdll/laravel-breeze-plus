@@ -38,11 +38,6 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 If you discover any security related issues, please email robson@l9s.dev instead of using the issue tracker.
 
-## Credits
-
--   [Robson Lunardelli](https://github.com/rlunardelli)
--   [All Contributors](../../contributors)
-
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
