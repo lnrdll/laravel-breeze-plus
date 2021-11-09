@@ -35,7 +35,7 @@ Breeze-plus provides a minimal and simple user profile page where users can upda
 
 ## Requirements
 
-It requires [Laravel Breeze](https://laravel.com/docs/8.x/starter-kits#laravel-breeze-installation).
+It requires fresh install of [Laravel Breeze](https://laravel.com/docs/8.x/starter-kits#laravel-breeze-installation).
 
 ## Installation
 
@@ -51,7 +51,7 @@ After Composer has installed the Laravel Breeze-plus package, you may run the `b
 php artisan breeze-plus:install
 ```
 
-Once the assets have been published, a new dropdown menu item `Profile` will show up. 
+Once the assets have been published, a new dropdown menu item `Profile` will show up.
 
 ## Changelog
 
