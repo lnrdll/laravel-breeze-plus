@@ -55,8 +55,24 @@ class InstallCommand extends Command
 
         // Routes...
         copy(__DIR__.'/../../stubs/default/routes/breezePlus.php', base_path('routes/breezePlus.php'));
-        (new Filesystem)->append(base_path('routes/web.php'), 'require __DIR__.\'/breezePlus.php\';', null);
+        $this->appendToFile(base_path('routes/web.php'), "require __DIR__.'/breezePlus.php';");
 
-        $this->info('Breeze-plus scaffolding installed successfully.');
+        $this->info('Breeze-plus installed successfully.');
+    }
+
+    /**
+     * Append to file if string is not present
+     *
+     * @param mixed $path
+     * @param mixed $data
+     * @return void
+     */
+    protected function appendToFile($path, $data)
+    {
+        if (is_file($path)) {
+            if (! strpos(file_get_contents($path), $data)) {
+                file_put_contents($path, $data, FILE_APPEND);
+            }
+        }
     }
 }
