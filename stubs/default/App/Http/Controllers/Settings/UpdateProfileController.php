@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Settings;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\BreezePlus\UpdateProfileRequest;
+use App\Http\Requests\Settings\UpdateProfileRequest;
 use Illuminate\Http\RedirectResponse;
 
 class UpdateProfileController extends Controller
