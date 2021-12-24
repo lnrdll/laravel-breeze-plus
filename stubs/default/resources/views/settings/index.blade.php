@@ -8,15 +8,15 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
 
-            @include('breezePlus.update-profile-form')
+            @include('settings.update-profile-form')
 
             <x-section-hline />
 
-            @include('breezePlus.update-password-form')
+            @include('settings.update-password-form')
 
             <x-section-hline />
 
-            @include('breezePlus.delete-account-form')
+            @include('settings.delete-account-form')
 
         </div>
     </div>
