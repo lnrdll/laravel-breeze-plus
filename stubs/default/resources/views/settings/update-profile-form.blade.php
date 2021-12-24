@@ -1,4 +1,4 @@
-<x-form-section :action="route('breeze-plus.update')" method="PUT">
+<x-form-section :action="route('settings.profile.update')" method="PUT">
     <x-slot name="title">
         {{ __('Profile Information') }}
     </x-slot>

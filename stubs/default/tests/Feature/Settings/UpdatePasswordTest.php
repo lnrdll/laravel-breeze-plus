@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Feature\BreezePlus;
+namespace Tests\Feature\Settings;
 
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -16,11 +16,11 @@ class UpdatePasswordTest extends TestCase
     {
         $this->actingAs($user = User::factory()->create());
 
-        $this->put(route('breeze-plus.update-password'), [
+        $this->put(route('settings.password.update'), [
             'current_password' => 'password',
             'password' => 'new-password',
             'password_confirmation' => 'new-password',
-        ])->assertRedirect(route('breeze-plus.index'));
+        ])->assertRedirect(route('settings.index'));
 
         $this->assertTrue(Hash::check('new-password', $user->fresh()->password));
     }
@@ -30,7 +30,7 @@ class UpdatePasswordTest extends TestCase
     {
         $this->actingAs($user = User::factory()->create());
 
-        $this->put(route('breeze-plus.update-password'), [
+        $this->put(route('settings.password.update'), [
             'current_password' => '',
             'password' => 'new-password',
             'password_confirmation' => 'new-password',
@@ -42,7 +42,7 @@ class UpdatePasswordTest extends TestCase
     {
         $this->actingAs($user = User::factory()->create());
 
-        $this->put(route('breeze-plus.update-password'), [
+        $this->put(route('settings.password.update'), [
             'current_password' => 'wrong-password',
             'password' => 'new-password',
             'password_confirmation' => 'new-password',
@@ -56,7 +56,7 @@ class UpdatePasswordTest extends TestCase
     {
         $this->actingAs($user = User::factory()->create());
 
-        $this->put(route('breeze-plus.update-password'), [
+        $this->put(route('settings.password.update'), [
             'current_password' => 'password',
             'password' => 'new-password',
             'password_confirmation' => 'wrong-password',

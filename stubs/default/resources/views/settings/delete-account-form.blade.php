@@ -1,4 +1,4 @@
-<x-form-section :action="route('breeze-plus.delete')" method="DELETE" confirmation="True">
+<x-form-section :action="route('settings.account.delete')" method="DELETE" confirmation="True">
     <x-slot name="title">
         {{ __('Delete Account') }}
     </x-slot>

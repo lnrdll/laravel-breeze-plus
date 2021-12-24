@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\BreezePlus;
+namespace App\Http\Controllers\Settings;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\BreezePlus\UpdatePasswordRequest;
@@ -17,6 +17,6 @@ class UpdatePasswordController extends Controller
             'password' => Hash::make($request->password),
         ]);
 
-        return redirect()->route('breeze-plus.index');
+        return redirect()->route('settings.index');
     }
 }

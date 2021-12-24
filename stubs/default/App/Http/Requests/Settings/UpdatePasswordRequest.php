@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Requests\BreezePlus;
+namespace App\Http\Requests\Settings;
 
+use App\Rules\CurrentPasswordRule;
 use Illuminate\Foundation\Http\FormRequest;
 
-class UpdateProfileRequest extends FormRequest
+class UpdatePasswordRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,8 +23,8 @@ class UpdateProfileRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => ['required', 'string'],
-            'email' => ['required', 'string', 'email:rfc,dns', 'unique:users,email,' . auth()->id()],
+            'password' => ['required', 'confirmed'],
+            'current_password' => ['required', new CurrentPasswordRule],
         ];
     }
 }

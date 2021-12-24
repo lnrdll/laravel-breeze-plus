@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Feature\BreezePlus;
+namespace Tests\Feature\Settings;
 
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -21,10 +21,10 @@ class UpdateProfileTest extends TestCase
         $this->assertEquals('test@test.com', $user->email);
         $this->assertEquals('old name', $user->name);
 
-        $this->put(route('breeze-plus.update'), [
+        $this->put(route('settings.profile.update'), [
             'name' => 'bob',
             'email' => 'admin@admin.com',
-        ])->assertRedirect(route('breeze-plus.index'));
+        ])->assertRedirect(route('settings.index'));
 
         $this->assertEquals('admin@admin.com', $user->fresh()->email);
         $this->assertEquals('bob', $user->fresh()->name);
@@ -40,7 +40,7 @@ class UpdateProfileTest extends TestCase
     {
         $this->actingAs(User::factory()->create());
 
-        $this->put(route('breeze-plus.update'), [
+        $this->put(route('settings.profile.update'), [
             'name' => '',
             'email' => '',
         ])->assertSessionHasErrors([
@@ -54,7 +54,7 @@ class UpdateProfileTest extends TestCase
     {
         $this->actingAs($user = User::factory()->create());
 
-        $this->put(route('breeze-plus.update'), [
+        $this->put(route('settings.profile.update'), [
             'name' => $user->name,
             'email' => 'fake@e',
         ])->assertInvalid('email');

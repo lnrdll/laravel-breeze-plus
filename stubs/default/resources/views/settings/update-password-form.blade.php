@@ -1,4 +1,4 @@
-<x-form-section :action="route('breeze-plus.update-password')" method="PUT">
+<x-form-section :action="route('settings.password.update')" method="PUT">
     <x-slot name="title">
         {{ __('Update Password') }}
     </x-slot>

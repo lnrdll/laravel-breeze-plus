@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\BreezePlus;
+namespace App\Http\Controllers\Settings;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\BreezePlus\UpdateProfileRequest;
@@ -12,6 +12,6 @@ class UpdateProfileController extends Controller
     {
         auth()->user()->update($request->validated());
 
-        return redirect()->route('breeze-plus.index');
+        return redirect()->route('settings.index');
     }
 }

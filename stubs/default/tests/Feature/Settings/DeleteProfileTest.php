@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Feature\BreezePlus;
+namespace Tests\Feature\Settings;
 
 use Tests\TestCase;
 use App\Models\User;
@@ -17,7 +17,7 @@ class DeleteProfileTest extends TestCase
 
         $this->assertDatabaseHas('users', $user->only('id'));
 
-        $this->delete(route('breeze-plus.delete'))->assertRedirect('/');
+        $this->delete(route('settings.account.delete'))->assertRedirect('/');
 
         $this->assertDatabaseMissing('users', $user->only('id'));
     }

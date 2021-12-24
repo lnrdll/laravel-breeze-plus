@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\BreezePlus;
+namespace App\Http\Controllers\Settings;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\RedirectResponse;
