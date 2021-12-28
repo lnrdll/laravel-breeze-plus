@@ -27,6 +27,6 @@ Route::put('/settings/email-notify', [EmailNotifyController::class, '__invoke'])
                 ->middleware(['auth'])
                 ->name('settings.email.notify');
 
-Route::get('settings/email-verify/{user}/{email}', [EmailVerifyController::class, 'verify'])
+Route::get('settings/email-verify/{id}/{email}', [EmailVerifyController::class, 'verify'])
                 ->middleware(['auth', 'signed'])
                 ->name('settings.email.verify');
