@@ -1,10 +1,10 @@
 <x-form-section :action="route('settings.profile.update')" method="PUT">
     <x-slot name="title">
-        {{ __('Profile Information') }}
+        {{ __('Name') }}
     </x-slot>
 
     <x-slot name="description">
-        {{ __('Update your account\'s profile information and email address.') }}
+        {{ __('Update your profile\'s name.') }}
     </x-slot>
 
     <x-slot name="form">
@@ -13,13 +13,6 @@
             <x-label for="name" value="{{ __('Name') }}" />
             <x-input name="name" id="name" type="text" class="mt-1 block w-full" value="{{ auth()->user()->name }}" />
             <x-input-error for="name" class="mt-2" />
-        </div>
-
-        <!-- Email -->
-        <div class="col-span-6 sm:col-span-4">
-            <x-label for="email" value="{{ __('Email') }}" />
-            <x-input name="email" id="email" type="email" class="mt-1 block w-full" value="{{ auth()->user()->email }}" />
-            <x-input-error for="email" class="mt-2" />
         </div>
     </x-slot>
 

@@ -22,8 +22,7 @@ class UpdateProfileRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => ['required', 'string'],
-            'email' => ['required', 'string', 'email:rfc,dns', 'unique:users,email,' . auth()->id()],
+            'name' => ['required', 'string', 'min:3']
         ];
     }
 }

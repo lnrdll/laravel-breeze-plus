@@ -40,6 +40,10 @@ class InstallCommand extends Command
         (new filesystem)->ensureDirectoryExists(app_path('Rules/'));
         (new filesystem)->copyDirectory(__DIR__.'/../../stubs/default/App/Rules/', app_path('Rules/'));
 
+        // Notifications...
+        (new filesystem)->ensureDirectoryExists(app_path('Notifications/'));
+        (new filesystem)->copyDirectory(__DIR__.'/../../stubs/default/App/Notifications/', app_path('Notifications/'));
+
         // Views...
         (new Filesystem)->ensureDirectoryExists(resource_path('views/settings'));
         (new Filesystem)->ensureDirectoryExists(resource_path('views/layouts'));

@@ -12,6 +12,10 @@
 
             <x-section-hline />
 
+            @include('settings.update-email-form')
+
+            <x-section-hline />
+
             @include('settings.update-password-form')
 
             <x-section-hline />
