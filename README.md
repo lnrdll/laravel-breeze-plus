@@ -48,7 +48,8 @@ composer require rlunardelli/laravel-breeze-plus --dev
 After Composer has installed the Laravel Breeze-plus package, you may run the `breeze-plus:install` Artisan commmand to publish the controllers, views, routes, requests, and rules to your application.
 
 ```bash
-php artisan breeze-plus:install
+$ php artisan breeze-plus:install
+$ npm install && npm run dev
 ```
 
 Once the assets have been published, a new dropdown menu item `Profile` will show up.
