@@ -1,15 +1,16 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Settings\SettingsController;
 use App\Http\Controllers\Settings\EmailNotifyController;
 use App\Http\Controllers\Settings\EmailVerifyController;
 use App\Http\Controllers\Settings\DeleteProfileController;
 use App\Http\Controllers\Settings\UpdateProfileController;
 use App\Http\Controllers\Settings\UpdatePasswordController;
 
-Route::view('/settings', 'settings.index')
+Route::get('/settings', [SettingsController::class, 'index'])
                 ->middleware(['auth'])
-                ->name('settings.index');
+                ->name('settings.profile.index');
 
 Route::put('/settings/profile/update', [UpdateProfileController::class, 'update'])
                 ->middleware(['auth'])
@@ -23,7 +24,7 @@ Route::put('/settings/password/update', [UpdatePasswordController::class, 'updat
                 ->middleware(['auth'])
                 ->name('settings.password.update');
 
-Route::put('/settings/email-notify', [EmailNotifyController::class, '__invoke'])
+Route::post('/settings/email-notify', [EmailNotifyController::class, '__invoke'])
                 ->middleware(['auth'])
                 ->name('settings.email.notify');
 

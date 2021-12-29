@@ -3,6 +3,7 @@
 namespace App\Http\Requests\Settings;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Facades\Cache;
 
 class UpdateEmailRequest extends FormRequest
 {
@@ -15,6 +16,13 @@ class UpdateEmailRequest extends FormRequest
         if (! hash_equals(
             (string) $this->route('id'),
             (string) $this->user()->getKey()
+        )) {
+            return false;
+        }
+
+        if (! hash_equals(
+            sha1($this->route('email')),
+            sha1(Cache::get('verify_' . $this->user()->getKey()))
         )) {
             return false;
         }

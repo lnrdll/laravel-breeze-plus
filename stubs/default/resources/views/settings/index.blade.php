@@ -12,7 +12,10 @@
 
             <x-section-hline />
 
-            @include('settings.update-email-form')
+            @include('settings.update-email-form', [
+                'showVerificationMessage' => $showVerificationMessage,
+                'emailToVerify' => $emailToVerify,
+                ])
 
             <x-section-hline />
 
