@@ -18,19 +18,15 @@ class UpdateProfileTest extends TestCase
             'email' => 'test@test.com',
         ]));
 
-        $this->assertEquals('test@test.com', $user->email);
         $this->assertEquals('old name', $user->name);
 
         $this->put(route('settings.profile.update'), [
             'name' => 'bob',
-            'email' => 'admin@admin.com',
-        ])->assertRedirect(route('settings.index'));
+        ])->assertRedirect(route('settings.profile.index'));
 
-        $this->assertEquals('admin@admin.com', $user->fresh()->email);
         $this->assertEquals('bob', $user->fresh()->name);
 
         $this->assertDatabaseHas('users', [
-            'email' => $user->fresh()->email,
             'name' => $user->fresh()->name,
         ]);
     }
@@ -42,14 +38,11 @@ class UpdateProfileTest extends TestCase
 
         $this->put(route('settings.profile.update'), [
             'name' => '',
-            'email' => '',
         ])->assertSessionHasErrors([
             'name' => 'The name field is required.',
-            'email' => 'The email field is required.',
         ]);
     }
 
-    /** @test */
     public function it_checks_the_email_validation()
     {
         $this->actingAs($user = User::factory()->create());

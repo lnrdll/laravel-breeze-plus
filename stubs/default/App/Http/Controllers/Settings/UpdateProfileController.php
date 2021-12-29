@@ -12,6 +12,6 @@ class UpdateProfileController extends Controller
     {
         auth()->user()->update($request->validated());
 
-        return redirect()->route('settings.index');
+        return redirect()->route('settings.profile.index');
     }
 }

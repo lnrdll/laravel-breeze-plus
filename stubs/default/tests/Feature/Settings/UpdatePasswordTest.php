@@ -20,7 +20,7 @@ class UpdatePasswordTest extends TestCase
             'current_password' => 'password',
             'password' => 'new-password',
             'password_confirmation' => 'new-password',
-        ])->assertRedirect(route('settings.index'));
+        ])->assertRedirect(route('settings.profile.index'));
 
         $this->assertTrue(Hash::check('new-password', $user->fresh()->password));
     }

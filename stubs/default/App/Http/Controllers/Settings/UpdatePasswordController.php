@@ -17,6 +17,6 @@ class UpdatePasswordController extends Controller
             'password' => Hash::make($request->password),
         ]);
 
-        return redirect()->route('settings.index');
+        return redirect()->route('settings.profile.index');
     }
 }
